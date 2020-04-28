@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENGworks.Navis", "ENGworks.Navis.csproj", "{9AB8050C-59AF-4D9C-B146-BBE404233DC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		2017|Any CPU = 2017|Any CPU
+		2018|Any CPU = 2018|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AB8050C-59AF-4D9C-B146-BBE404233DC7}.2017|Any CPU.ActiveCfg = 2017|Any CPU
+		{9AB8050C-59AF-4D9C-B146-BBE404233DC7}.2017|Any CPU.Build.0 = 2017|Any CPU
+		{9AB8050C-59AF-4D9C-B146-BBE404233DC7}.2018|Any CPU.ActiveCfg = 2018|Any CPU
+		{9AB8050C-59AF-4D9C-B146-BBE404233DC7}.2018|Any CPU.Build.0 = 2018|Any CPU
+		{9AB8050C-59AF-4D9C-B146-BBE404233DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB8050C-59AF-4D9C-B146-BBE404233DC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FCE2003-C47E-41AD-9F4D-6B04C7A8B794}
+	EndGlobalSection
+EndGlobal

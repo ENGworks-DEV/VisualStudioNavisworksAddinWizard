@@ -1,5 +1,0 @@
-C:\Users\pderendinger\source\repos\ENGworks.Navis\obj\2017\ENGworks.Navis.csprojAssemblyReference.cache
-C:\Users\pderendinger\source\repos\ENGworks.Navis\obj\2017\ENGworks.Navis.Ctr.UcProperties.resources
-C:\Users\pderendinger\source\repos\ENGworks.Navis\obj\2017\ENGworks.Navis.Ctr.UcTools.resources
-C:\Users\pderendinger\source\repos\ENGworks.Navis\obj\2017\ENGworks.Navis.Ctr.UcUpdate.resources
-C:\Users\pderendinger\source\repos\ENGworks.Navis\obj\2017\ENGworks.Navis.csproj.GenerateResource.cache
