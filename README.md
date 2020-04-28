@@ -11,9 +11,6 @@
 
 The Visual Studio Navisworks add-in wizards provide Visual Studio templates for generating C# and VB .NET Revit add-ins.
 
-They enable the instantaneous and automatic generation, installation and debugging of a new Revit add-in skeleton with one single click.
-
-
 Template based on [Connessioni Training videos](https://www.youtube.com/watch?v=fbMz7roQptU).
 
 
