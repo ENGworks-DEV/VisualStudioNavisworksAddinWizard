@@ -1,4 +1,5 @@
-﻿using Autodesk.Navisworks.Api.Plugins;
+﻿//Based on https://www.youtube.com/watch?v=fbMz7roQptU
+using Autodesk.Navisworks.Api.Plugins;
 using ENGworks.Navis.Ctr;
 using System;
 using System.Collections.Generic;
@@ -15,21 +16,21 @@ namespace ENGworks.Navis.Addins
     {
         public override Control CreateControlPane()
         {
-            //Create a tabControl to store more user controls (Aula/Lesson 6)
+            //Create a tabControl to store more user controls 
             var tc = new TabControl();
             tc.ParentChanged += SetDockStile;
 
-            //Store UcUpdate in the TabControl (Aula/Lesson 6)
+            //Store UcUpdate in the TabControl 
             var tp1 = new TabPage("Auto Update");
             tp1.Controls.Add(new UcUpdate());
             tc.TabPages.Add(tp1);
 
-            //Store UcUpdate in the TabControl (Aula/Lesson 6)
+            //Store UcUpdate in the TabControl 
             var tp2 = new TabPage("Out Properties");
             tp2.Controls.Add(new UcProperties());
             tc.TabPages.Add(tp2);
 
-            //Store UcUpdate in the TabControl (Aula/Lesson 6)
+            //Store UcUpdate in the TabControl 
             var tp3 = new TabPage("Tools");
             tp3.Controls.Add(new UcTools());
             tc.TabPages.Add(tp3);

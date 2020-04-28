@@ -257,9 +257,9 @@ namespace ENGworks.Navis.Ctr
                 if (view != null) view.ApplyHideAttribs = true;
                 view.ApplyMaterialAttribs = true;
 
-                vp.Name = LastIsolatedName;
+                //vp.Name = LastIsolatedName;
 
-                vp.anonview = cv;
+                //vp.anonview = cv;
 
                 state.SavedViews().Add(vp);
 

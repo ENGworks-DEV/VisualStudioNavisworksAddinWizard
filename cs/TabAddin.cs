@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Based on https://www.youtube.com/watch?v=fbMz7roQptU
+using System;
 using System.Windows.Forms;
 using ENGworks.Navis.Ctr;
 using Autodesk.Navisworks.Api.Plugins;
@@ -14,7 +15,7 @@ namespace ENGworks.Navis
     [RibbonTab("ID_CustomTab_1", DisplayName = "ENGworks")]
     [Command("ID_Button_1", Icon = "1_16.png", LargeIcon = "1_32.png", ToolTip = "Tool tip of tool")]
     [Command("ID_Button_2", Icon = "1_16.png", LargeIcon = "1_32.png", ToolTip = "Tool tip of tool")]
-    public class ClAddin : CommandHandlerPlugin
+    public class TabAddin : CommandHandlerPlugin
     {
         public override int ExecuteCommand(string name, params string[] parameters)
         {

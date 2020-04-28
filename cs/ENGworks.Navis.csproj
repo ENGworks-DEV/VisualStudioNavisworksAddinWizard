@@ -2,71 +2,38 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9AB8050C-59AF-4D9C-B146-BBE404233DC7}</ProjectGuid>
+    <Prefer32Bit>false</Prefer32Bit>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ENGworks.Navis</RootNamespace>
     <AssemblyName>ENGworks.Navis</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '2018|AnyCPU' ">
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x64</PlatformTarget>
-    <OutputPath>bin\Debug\</OutputPath>
+    <ProjectGuid>{9AB8050C-59AF-4D9C-B146-BBE404233DC7}</ProjectGuid>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '2017|AnyCPU'">
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin\2017\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == '2018|AnyCPU' ">
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin\2018\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '2019|AnyCPU'">
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <OutputPath>bin\2019\</OutputPath>
+  </PropertyGroup>
+  <Import Project="2017.targets" Condition="'$(Configuration)|$(Platform)' == '2017|AnyCPU'" />
+  <Import Project="2018.targets" Condition="'$(Configuration)|$(Platform)' == '2018|AnyCPU'" />
+  <Import Project="2019.targets" Condition="'$(Configuration)|$(Platform)' == '2019|AnyCPU'" />
   <ItemGroup>
-    <Reference Include="AdWindows, Version=2016.11.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\AdWindows.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Api, Version=15.0.1314.36, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.Api.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Automation, Version=15.0.1314.36, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.Automation.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Clash, Version=15.0.1314.36, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.Clash.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.ComApi, Version=15.0.1314.36, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.ComApi.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Controls, Version=15.0.1314.36, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Interop.ComApi, Version=15.0.1314.36, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Interop.Timeliner, Version=15.0.1314.36, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.Interop.Timeliner.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Resolver, Version=15.0.1314.36, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.Resolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Takeoff, Version=15.0.1314.36, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.Takeoff.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Timeliner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
-      <HintPath>..\ENGworks.NavisworksTools\packages\Navisworks-2018-x64-API.1.0.2\lib\net46\Autodesk.Navisworks.Timeliner.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -81,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Addins\AddinA.cs" />
     <Compile Include="Addins\Dock.cs" />
-    <Compile Include="ClAddin.cs" />
+    <Compile Include="TabAddin.cs" />
     <Compile Include="Ctr\UcProperties.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,8 +103,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y /E $(TargetDir)* "%25appdata%25\Autodesk Navisworks Manage $(ConfigurationName)\Plugins\$(ProjectName)\"
-</PostBuildEvent>
+    <PostBuildEvent>
+      xcopy /Y /E $(TargetDir)* "%25appdata%25\Autodesk Navisworks Manage $(ConfigurationName)\Plugins\$(ProjectName)\"
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
